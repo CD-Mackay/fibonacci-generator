@@ -5,12 +5,12 @@ export default function Input(props) {
   const [numTwo, setNumTwo] = useState(0);
   const [sequence, setSequence] = useState([]);
   function create () {
-    props.onSubmit(1, 2)
+   setSequence(props.onSubmit(numone, numTwo))
   }
   return (
     <form>
-      <input type="number" />
-      <input type="number" />
+      <input type="number" onChange={e => setNumone(e.target.value)} />
+      <input type="number" onChange={e => setNumTwo(e.target.value)} />
       <button onClick={create} >Submit!</button>
     </form>
   )
