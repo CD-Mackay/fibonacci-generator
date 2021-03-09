@@ -14,6 +14,7 @@ export default function Input(props) {
 
   return (
     <div>
+      <h3>Enter your starting numbers below</h3>
     <form onSubmit={event => event.preventDefault()} id="input-form">
       <div class="seperator">
       <label for="numOne">Enter the first number</label>
@@ -29,7 +30,7 @@ export default function Input(props) {
       </div>
       <button onClick={create} >Submit!</button>
     </form>
-    {sequence.length > 0 && <Output sequence={sequence} />}
+    {sequence.length > 0 && <Output sequence={sequence} numOne={numone} numTwo={numTwo} numThree={numThree} />}
      </div>
   )
 }

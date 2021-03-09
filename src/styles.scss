@@ -1,5 +1,5 @@
-.app {
-  max-width: 600px;
+#input-form {
+  text-align: left;
 }
 
 #output {
@@ -7,9 +7,14 @@
   li {
     list-style-type: none;
     line-height: 1.5;
+    text-decoration: underline;
   }
 }
 
-html {
-  max-width: 600px;
+.seperator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  width: 400px;
 }
