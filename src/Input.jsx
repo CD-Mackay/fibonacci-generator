@@ -11,10 +11,6 @@ export default function Input(props) {
   setSequence([fib]);
   }
 
-  const renderSequence = sequence.map((n) => {
-    return <Output number={n} />
-  })
-
   return (
     <div>
     <form onSubmit={event => event.preventDefault()} >
@@ -22,9 +18,7 @@ export default function Input(props) {
       <input type="number" onChange={e => setNumTwo(e.target.value)} />
       <button onClick={create} >Submit!</button>
     </form>
-    <ul>
-      { renderSequence }
-    </ul>
+    <Output sequence={sequence} />
      </div>
   )
 }
