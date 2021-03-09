@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Input from './Input';
+import './styles.scss';
 
 import useInputData from './hooks/useInputData';
 import './App.css';
