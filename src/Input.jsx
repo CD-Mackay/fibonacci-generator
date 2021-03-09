@@ -1,4 +1,6 @@
+import { render } from '@testing-library/react';
 import React, { useState } from 'react';
+import Output from './Output';
 
 export default function Input(props) {
   const [numone, setNumone] = useState(0);
@@ -9,11 +11,20 @@ export default function Input(props) {
   setSequence([fib]);
   }
 
+  const renderSequence = sequence.map((n) => {
+    return <Output number={n} />
+  })
+
   return (
+    <div>
     <form onSubmit={event => event.preventDefault()} >
       <input type="number" onChange={e => setNumone(e.target.value)} />
       <input type="number" onChange={e => setNumTwo(e.target.value)} />
       <button onClick={create} >Submit!</button>
     </form>
+    <ul>
+      { renderSequence }
+    </ul>
+     </div>
   )
 }
