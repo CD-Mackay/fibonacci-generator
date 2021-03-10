@@ -26,6 +26,11 @@
   }
 }
 
+#root {
+  width: 50vw;
+  margin: auto;
+}
+
 .seperator {
   display: flex;
   flex-direction: row;
@@ -34,7 +39,3 @@
   width: 400px;
 }
 
-#root {
-  width: 50vw;
-  margin: auto;
-}
