@@ -1,9 +1,15 @@
+.input {
+  padding: 10px;
+  background-color: #9EFFA4;
+}
 #input-form {
   text-align: left;
 }
 
 #output {
   text-align: left;
+  background-color: #8EE694;
+  padding: 10px;
   li {
     list-style-type: none;
     line-height: 1.5;
@@ -17,4 +23,9 @@
   justify-content: space-between;
   margin-bottom: 2px;
   width: 400px;
+}
+
+#root {
+  width: 50vw;
+  margin: auto;
 }

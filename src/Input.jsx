@@ -13,7 +13,7 @@ export default function Input(props) {
   }
 
   return (
-    <div>
+    <div class="input">
       <h3>Enter your starting numbers below</h3>
     <form onSubmit={event => event.preventDefault()} id="input-form">
       <div class="seperator">
