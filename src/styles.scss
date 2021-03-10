@@ -1,18 +1,28 @@
 .input {
   padding: 10px;
   background-color: #9EFFA4;
+  border-radius: 5px;
+  p {
+    margin: 0;
+  }
 }
 #input-form {
   text-align: left;
+  margin-top: 10px;
 }
 
 #output {
   text-align: left;
   background-color: #8EE694;
   padding: 10px;
+  border-radius: 5px;
   li {
     list-style-type: none;
     line-height: 1.5;
+  }
+
+  h3, h4 {
+    text-align: center;
   }
 }
 
