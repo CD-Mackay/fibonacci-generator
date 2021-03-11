@@ -13,20 +13,20 @@ export default function Input(props) {
   }
 
   return (
-    <div class="input">
+    <div className="input">
       <h3>Welcome to the Fibonacci Generator!</h3>
       <p>Please enter three numbers below, the first two will form the basis of the Fibonacci sequence.</p>
       <a id="fibonacci-link" href="https://en.wikipedia.org/wiki/Fibonacci_number">A fib-a what?</a>
     <form onSubmit={event => event.preventDefault()} id="input-form">
-      <div class="seperator">
+      <div className="seperator">
       <label for="numOne">Enter the first number</label>
       <input type="number" onChange={e => setNumone(e.target.value)} />
       </div>
-      <div class="seperator">
+      <div className="seperator">
       <label for="numTwo">Enter the second number</label>
       <input type="number" onChange={e => setNumTwo(e.target.value)} />
       </div>
-      <div class="seperator">
+      <div className="seperator">
         <label for="numentries">How entries should be run?</label>
         <input type="number" onChange={e => setNumThree(e.target.value)}></input>
       </div>
