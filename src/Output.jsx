@@ -14,9 +14,7 @@ export default function Output(props) {
     <ul>
     { renderSequence }
     </ul>
-    <form action="/save" method="post">
       <button type="submit">Save!</button>
-    </form>
     </div>
   )
 }

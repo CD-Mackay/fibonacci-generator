@@ -28,12 +28,19 @@ pool.connect((err, client, release) => {
 app.get('/', (req, res) => {
   pool.query('SELECT * FROM sequences')
   .then(data => {
-    res.json(data);
+    res.json(data.rows);
   });
 })
 
 app.post('/save', (req, res) => {
-  console.log(req.body);
+  console.log(req);
+  pool.query('INSERT INTO sequences(num_one, num_two, num_three) VALUES (1, 1, 13);')
+  .then(data => {
+    console.log(data);
+  })
+  .catch(err => {
+    console.log(err);
+  })
 })
 
 app.listen(port, () => {
