@@ -24,6 +24,9 @@ pool.connect((err, client, release) => {
   })
 });
 
+app.post('/save', (req, res) => {
+  console.log(req.body);
+})
 
 app.listen(port, () => {
   console.log(`backend api listening on port ${port}! woooh!`);
