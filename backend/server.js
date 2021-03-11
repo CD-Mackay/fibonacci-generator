@@ -24,6 +24,14 @@ pool.connect((err, client, release) => {
   })
 });
 
+
+app.get('/', (req, res) => {
+  pool.query('SELECT * FROM sequences')
+  .then(data => {
+    res.json(data);
+  });
+})
+
 app.post('/save', (req, res) => {
   console.log(req.body);
 })
