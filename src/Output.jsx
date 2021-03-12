@@ -2,6 +2,9 @@ import React from 'react';
 import './styles.scss';
 
 export default function Output(props) {
+  function save () {
+    props.save(props.numOne, props.numTwo, props.numThree);
+  };
   
   const renderSequence = props.sequence[0].map(n => {
     return <li key={n}>{n}</li>
@@ -14,9 +17,7 @@ export default function Output(props) {
     <ul>
     { renderSequence }
     </ul>
-    <form action="/save" method="post">
-      <button type="submit">Save!</button>
-    </form>
+      <button onClick={save} >Save!</button>
     </div>
   )
 }

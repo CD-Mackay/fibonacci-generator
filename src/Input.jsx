@@ -32,7 +32,7 @@ export default function Input(props) {
       </div>
       <button onClick={create} >Submit!</button>
     </form>
-    {sequence.length > 0 && <Output sequence={sequence} numOne={numone} numTwo={numTwo} numThree={numThree} />}
+    {sequence.length > 0 && <Output save={props.onSave} sequence={sequence} numOne={numone} numTwo={numTwo} numThree={numThree} />}
      </div>
   )
 }

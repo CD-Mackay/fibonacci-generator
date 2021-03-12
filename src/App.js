@@ -2,16 +2,18 @@ import Input from './Input';
 import './styles.scss';
 
 import useInputData from './hooks/useInputData';
+import useStoredData from './hooks/useStoredData';
 import './App.css';
 
 function App() {
 
 
   const { generateFibonacci } = useInputData();
+  const { saveSequence } = useStoredData();
   
   return (
     <div className="App">
-      <Input onSubmit={generateFibonacci} />
+      <Input onSubmit={generateFibonacci} onSave={saveSequence} />
     </div>
   );
 }
