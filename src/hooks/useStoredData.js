@@ -1,6 +1,7 @@
 import { useEffect, useState} from 'react';
 import axios from 'axios';
 
+
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 const useStoredData = () => {
@@ -12,6 +13,7 @@ const useStoredData = () => {
     })
     .then(data => {
       setState([data]);
+      console.log(state);
     })
     .catch(err => console.log(err));
   }, [])
@@ -32,7 +34,8 @@ const useStoredData = () => {
   };
 
   return {
-    saveSequence
+    saveSequence,
+    state
   }
 }
 

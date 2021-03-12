@@ -32,8 +32,7 @@ app.get('/sequences', (req, res) => {
   });
 })
 
-app.post('/save', (req, res) => {
-  console.log(req);
+const saveSequence = (sequence) => {
   pool.query('INSERT INTO sequences(num_one, num_two, num_three) VALUES (1, 1, 13);')
   .then(data => {
     console.log(data);
@@ -41,7 +40,9 @@ app.post('/save', (req, res) => {
   .catch(err => {
     console.log(err);
   })
-})
+}
+ 
+
 
 app.listen(port, () => {
   console.log(`backend api listening on port ${port}! woooh!`);

@@ -17,7 +17,7 @@ export default function Output(props) {
     <ul>
     { renderSequence }
     </ul>
-      <button onClick={save} type="submit">Save!</button>
+      <button onClick={save} >Save!</button>
     </div>
   )
 }
