@@ -25,7 +25,7 @@ pool.connect((err, client, release) => {
 });
 
 
-app.get('/', (req, res) => {
+app.get('/sequences', (req, res) => {
   pool.query('SELECT * FROM sequences')
   .then(data => {
     res.json(data.rows);
