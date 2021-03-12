@@ -24,11 +24,12 @@ const useStoredData = () => {
       num_two: num2,
       num_three: num3
     };
+    console.log(sequence);
 
     return axios({
       method: 'post',
       url: '/sequences',
-      data: { sequence },
+      data: JSON.stringify({ sequence }),
     })
     .catch(err => console.log(err));
   };

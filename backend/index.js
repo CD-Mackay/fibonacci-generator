@@ -4,7 +4,6 @@ const port = process.env.PORT || 3002;
 const { Pool } = require('pg');
 const user = process.env.PGUSER || 'connormackay';
 const database = process.env.PGDATABASE || 'fibonacci_db';
-const index = require('./index');
 
 const pool = new Pool ({
   host: 'localhost',
@@ -25,33 +24,21 @@ pool.connect((err, client, release) => {
   })
 });
 
-
-app.get('/sequences', (req, res) => {
-  pool.query('SELECT * FROM sequences')
-  .then(data => {
-    res.json(data.rows);
-  });
-})
-
-app.post('/sequences', (req, res) => {
-  console.log(req.params);
-  console.log(req.body);
-  console.log(req);
-
-  index.saveSequence(req.body)
-  .then(response => {
-    res.status(200).send(response);
+const saveSequence = (sequence) => {
+  return new Promise(function(resolve, reject) {
+    const { numOne, numTwo, numThree } = sequence
+    pool.query('INSERT INTO sequences(num_one, num_two, num_three) VALUES ($1, $2, $3);', 
+    [numOne, numTwo, numThree], (error, results) => {
+      if (error) {
+        reject(error)
+      }
+      resolve(`A new sequence has been added: ${results.rows[0]}`)
+    })
   })
-  .catch(err => {
-    res.status(500).send(err);
-  })
-});
+  
+  
+}
 
-
-
-app.listen(port, () => {
-  console.log('3');
-  console.log('2');
-  console.log('1');
-  console.log(`backend api listening on port ${port}! woooh!`);
-})
+module.exports = {
+  saveSequence
+}
