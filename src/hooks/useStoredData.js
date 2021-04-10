@@ -7,7 +7,6 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 const useStoredData = () => {
 
   const [state, setState] = useState();
-
   useEffect(() => {
     axios({
       method: 'get',
