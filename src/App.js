@@ -1,4 +1,5 @@
 import Input from './Input';
+import SequenceList from './Components/SequenceList';
 import './styles.scss';
 
 import useInputData from './hooks/useInputData';
@@ -9,11 +10,12 @@ function App() {
 
 
   const { generateFibonacci } = useInputData();
-  const { saveSequence } = useStoredData();
+  const { saveSequence, state } = useStoredData();
   
   return (
     <div className="App">
       <Input onSubmit={generateFibonacci} onSave={saveSequence} />
+      {/* <SequenceList sequences={state.data} /> */}
     </div>
   );
 }

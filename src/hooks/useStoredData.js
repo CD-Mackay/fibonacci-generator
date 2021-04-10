@@ -5,6 +5,7 @@ import axios from 'axios';
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 const useStoredData = () => {
+
   const [state, setState] = useState();
   useEffect(() => {
     axios({
@@ -12,7 +13,7 @@ const useStoredData = () => {
       url: '/sequences',
     })
     .then(data => {
-      setState([data]);
+      setState(data);
       console.log(state);
     })
     .catch(err => console.log(err));
