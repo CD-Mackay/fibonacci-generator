@@ -34,11 +34,11 @@ app.get('/sequences', (req, res) => {
 })
 
 app.post('/sequences', (req, res) => {
-  console.log(req.params);
-  console.log(req.body);
   console.log(req);
+  const sequence = {num_one: "1", num_two: "1", num_three: "4"}
 
-  index.saveSequence(req.body)
+  index.saveSequence(sequence)
+  // pool.query('INSERT INTO sequences (num_one, num_two, num_three) VALUES ($1, $2, $3)', [1, 3, 8])
   .then(response => {
     res.status(200).send(response);
   })

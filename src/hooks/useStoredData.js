@@ -13,9 +13,7 @@ const useStoredData = () => {
       url: '/sequences',
     })
     .then(data => {
-      console.log(data);
       setState(data.data);
-      console.log(state);
     })
     .catch(err => console.log(err));
   }, []);
@@ -32,7 +30,7 @@ const useStoredData = () => {
     return axios({
       method: 'post',
       url: '/sequences',
-      data: JSON.stringify({ sequence }),
+      data: { sequence }
     })
     .catch(err => console.log(err));
   };
