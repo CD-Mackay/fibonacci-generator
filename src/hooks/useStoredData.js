@@ -13,7 +13,8 @@ const useStoredData = () => {
       url: '/sequences',
     })
     .then(data => {
-      setState(data);
+      console.log(data);
+      setState(data.data);
       console.log(state);
     })
     .catch(err => console.log(err));

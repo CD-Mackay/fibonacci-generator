@@ -11,11 +11,12 @@ function App() {
 
   const { generateFibonacci } = useInputData();
   const { saveSequence, state } = useStoredData();
+
   
   return (
     <div className="App">
       <Input onSubmit={generateFibonacci} onSave={saveSequence} />
-      <SequenceList sequences={state.data} onView={generateFibonacci} />
+      <SequenceList sequences={state} onView={generateFibonacci} />
     </div>
   );
 }
