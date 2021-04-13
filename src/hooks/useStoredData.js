@@ -17,7 +17,7 @@ const useStoredData = () => {
       console.log(state);
     })
     .catch(err => console.log(err));
-  }, [])
+  }, []);
 
   function saveSequence(num1, num2, num3) {
     const sequence = {
@@ -25,6 +25,7 @@ const useStoredData = () => {
       num_two: num2,
       num_three: num3
     };
+
     console.log(sequence);
 
     return axios({

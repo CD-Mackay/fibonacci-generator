@@ -1,7 +1,11 @@
 import React from 'react';
 
 export default function ListItem(props) {
+
+  const view = () => {
+   console.log(props.onSelect(props.numone, props.numTwo));
+  }
   return (
-    <p>{props.numone}{props.numTwo}</p>
+   <button onClick={view}>{props.numone}{props.numTwo}</button>
   )
 }
