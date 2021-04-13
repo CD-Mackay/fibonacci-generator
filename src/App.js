@@ -11,6 +11,7 @@ function App() {
 
   const { generateFibonacci } = useInputData();
   const { saveSequence, state } = useStoredData();
+
   
   return (
     <div className="App">
