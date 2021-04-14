@@ -5,6 +5,8 @@ const { Pool } = require('pg');
 const user = process.env.PGUSER || 'connormackay';
 const database = process.env.PGDATABASE || 'fibonacci_db';
 const index = require('./index');
+app.use(express.urlencoded());  
+app.use(express.json());
 
 const pool = new Pool ({
   host: 'localhost',
@@ -34,11 +36,10 @@ app.get('/sequences', (req, res) => {
 })
 
 app.post('/sequences', (req, res) => {
-  console.log(req);
-  const sequence = {num_one: "1", num_two: "1", num_three: "4"}
-
-  index.saveSequence(sequence)
-  // pool.query('INSERT INTO sequences (num_one, num_two, num_three) VALUES ($1, $2, $3)', [1, 3, 8])
+  const sequence = req.body;
+ // index.saveSequence(req.body)
+  const { num_one, num_two, num_three} = sequence;
+  pool.query('INSERT INTO sequences (num_one, num_two, num_three) VALUES ($1, $2, $3)', [num_one, num_two, num_three])
   .then(response => {
     res.status(200).send(response);
   })

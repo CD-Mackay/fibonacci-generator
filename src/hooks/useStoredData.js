@@ -4,6 +4,7 @@ import axios from 'axios';
 
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
+
 const useStoredData = () => {
 
   const [state, setState] = useState();
@@ -30,7 +31,7 @@ const useStoredData = () => {
     return axios({
       method: 'post',
       url: '/sequences',
-      data: { sequence }
+      data:  sequence 
     })
     .catch(err => console.log(err));
   };

@@ -26,6 +26,7 @@ pool.connect((err, client, release) => {
 
 const saveSequence = (sequence) => {
   return new Promise(function(resolve, reject) {
+    console.log(sequence);
     const { numOne, numTwo, numThree } = sequence
     pool.query('INSERT INTO sequences(num_one, num_two, num_three) VALUES ($1, $2, $3);', 
     [numOne, numTwo, numThree], (error, results) => {
