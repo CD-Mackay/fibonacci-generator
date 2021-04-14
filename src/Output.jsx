@@ -5,9 +5,15 @@ export default function Output(props) {
   function save () {
     props.save(props.numOne, props.numTwo, props.numThree);
   };
+
+ 
+  const sequence = [...props.sequence[props.sequence.length - 1]];
+ 
+  const largestNum = sequence[sequence.length - 1];
   
   const renderSequence = props.sequence[0].map(n => {
-    return <li key={n}>{n}</li>
+    const visualizerLength = (n / largestNum * 100);
+    return <li key={n}>{n}<div className="data-visual" style={{width: visualizerLength + "%"}} ></div></li>
   })
   return (
     
