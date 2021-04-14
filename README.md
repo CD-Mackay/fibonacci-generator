@@ -21,5 +21,4 @@ Backend: -Express
 -Run npm install to install dependencies. 
 -cd into backend, setup ENV file according to the env.example file
 
-Backend: nodemon ./server.js
-Frontend: npm start
+run terminals out of front and backend folders, use npm start to begin each server. 
