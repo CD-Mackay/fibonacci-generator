@@ -10,7 +10,7 @@ import './App.css';
 function App() {
 
 
-  const { generateFibonacci, shownSequence, selectSequence } = useInputData();
+  const { generateFibonacci, shownSequence } = useInputData();
   const { saveSequence, state } = useStoredData();
 
   

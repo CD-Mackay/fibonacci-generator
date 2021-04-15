@@ -3,7 +3,7 @@ import './styles.scss';
 
 export default function Output(props) {
   function save () {
-    props.save(props.numOne, props.numTwo, props.numThree);
+    props.save(sequence[0], sequence[1], sequence.length -2);
   };
 
  
@@ -16,7 +16,6 @@ export default function Output(props) {
     return <li key={n}>{n}<div className="data-visual" style={{width: visualizerLength + "%"}} ></div></li>
   })
   return (
-    
     <div id="output">
       <h3>A Fibonacci sequence, beginning with {sequence[0]} and {sequence[1]}</h3> 
       <h4>{sequence.length - 2} iterations</h4>
