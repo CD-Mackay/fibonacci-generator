@@ -3,7 +3,7 @@ import React from 'react';
 export default function ListItem(props) {
 
   const view = () => {
-    props.onSelect();
+    props.onSelect(props.numone, props.numTwo, props.numThree);
   }
   
   return (

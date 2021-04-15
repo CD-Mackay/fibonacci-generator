@@ -10,7 +10,7 @@ const useInputData = () => {
       let newNum = Number(arr[arr.length - 1]) + Number(arr[arr.length - 2]);
       arr.push(newNum);
     } setShownSequence(arr); 
-      return arr;
+      // return arr;
   } 
 
 
