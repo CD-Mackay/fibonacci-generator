@@ -1,4 +1,7 @@
+import { useState } from 'react';
 const useInputData = () => {
+
+  const [shownSequence, setShownSequence] = useState();
 
   function generateFibonacci(num1, num2, num3) {
     let arr = [Number(num1), Number(num2)];
@@ -6,13 +9,19 @@ const useInputData = () => {
     for (let i = 0; i < Number(num3); i++) {
       let newNum = Number(arr[arr.length - 1]) + Number(arr[arr.length - 2]);
       arr.push(newNum);
-    } return arr;
+    } setShownSequence(arr); 
+      return arr;
   } 
 
 
+  function selectSequence(arr) {
+    setShownSequence(arr);
+  }
 
 
-  return { generateFibonacci }
+
+
+  return { generateFibonacci, shownSequence, selectSequence }
 }
 
 export default useInputData;
