@@ -4,8 +4,10 @@ export default function ListItem(props) {
   let showSequence = <div></div>
 
   const view = () => {
-    let sequence = props.onSelect(props.numone, props.numTwo, props.numThree);
-   showSequence = sequence.map(seq => {return <li>{seq}</li>})
+    props.onSelect();
+    if (props.shown) {
+   showSequence = props.shown.map(seq => {return <li>{seq}</li>})
+    }
   };
   
   return (

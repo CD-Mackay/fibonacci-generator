@@ -13,6 +13,7 @@ const useInputData = () => {
       return arr;
   } 
 
+
   function selectSequence(arr) {
     setShownSequence(arr);
   }

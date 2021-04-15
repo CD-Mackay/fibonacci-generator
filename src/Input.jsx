@@ -6,10 +6,9 @@ export default function Input(props) {
   const [numone, setNumone] = useState(0);
   const [numTwo, setNumTwo] = useState(0);
   const [numThree, setNumThree] = useState(0);
-  const [sequence, setSequence] = useState([]);
+  //const [sequence, setSequence] = useState([]);
   function create () {
   props.onSubmit(numone, numTwo, numThree);
-  //setSequence([fib]);
   }
 
   return (
@@ -32,7 +31,7 @@ export default function Input(props) {
       </div>
       <button onClick={create} >Submit!</button>
     </form>
-    {props.shown && <Output save={props.onSave} sequence={sequence} numOne={numone} numTwo={numTwo} numThree={numThree} />}
+    {props.shown && <Output save={props.onSave} sequence={props.shown} numOne={numone} numTwo={numTwo} numThree={numThree} />}
      </div>
   )
 }

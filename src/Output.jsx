@@ -7,7 +7,7 @@ export default function Output(props) {
   };
 
  
-  const sequence = [...props.sequence[props.sequence.length - 1]];
+  const sequence = [...props.sequence];
  
   const largestNum = sequence[sequence.length - 1];
   
