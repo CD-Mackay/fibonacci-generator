@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './liststyles.scss';
 
 export default function ListItem(props) {
 const [deleted, setDeleted] = useState(false);
