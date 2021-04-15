@@ -35,7 +35,7 @@ const useStoredData = () => {
     return false;
   }
 
-  
+
   function saveSequence(num1, num2, num3) {
     const sequence = {
       num_one: num1,
@@ -55,8 +55,18 @@ const useStoredData = () => {
   }
   };
 
+  function deleteSequence(id) {
+
+    return axios({
+      method: 'delete',
+      url: `/sequences/${id}`
+    })
+    .catch(err => console.log(err));
+  };
+
   return {
     saveSequence,
+    deleteSequence,
     state
   }
 }
