@@ -15,7 +15,9 @@ const useInputData = () => {
 
 
   function selectSequence(arr) {
+    console.log(arr);
     setShownSequence(arr);
+    return console.log(shownSequence);
   }
 
 

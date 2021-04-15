@@ -31,7 +31,6 @@ export default function Input(props) {
       </div>
       <button onClick={create} >Submit!</button>
     </form>
-    {props.shown && <Output save={props.onSave} sequence={props.shown} numOne={numone} numTwo={numTwo} numThree={numThree} />}
      </div>
   )
 }

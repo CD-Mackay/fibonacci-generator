@@ -1,4 +1,5 @@
 import Input from './Input';
+import Output from './Output';
 import SequenceList from './Components/SequenceList';
 import './styles.scss';
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Input onSubmit={generateFibonacci} onSave={saveSequence} shown={shownSequence} />
+      {shownSequence && <Output sequence={shownSequence} save={saveSequence} />}
       <SequenceList sequences={state} onView={selectSequence} sequence={shownSequence} />
     </div>
   );
