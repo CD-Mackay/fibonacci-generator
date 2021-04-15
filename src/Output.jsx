@@ -8,13 +8,21 @@ export default function Output(props) {
   };
 
  
+  function generateRandomNumber() {
+    return Math.floor((Math.random() * 10000) + 1);
+  }
   const sequence = [...props.sequence];
  
   const largestNum = sequence[sequence.length - 1];
   
   const renderSequence = sequence.map(n => {
     const visualizerLength = (n / largestNum * 100);
-    return <li key={n}>{n}<div className="data-visual" style={{width: visualizerLength + "%"}} ></div></li>
+
+    return <li key={generateRandomNumber()}>{n}
+             <div className="data-visual" 
+                  style={{width: visualizerLength + "%"}} >
+             </div>
+           </li>
   })
   return (
     <div id="output">

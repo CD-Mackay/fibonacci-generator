@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Input onSubmit={generateFibonacci} shown={shownSequence} />
       {shownSequence && <Output sequence={shownSequence} save={saveSequence} clear={removeShownSequence} />}
-      <SequenceList sequences={state} onView={generateFibonacci} delete={deleteSequence} sequence={shownSequence} />
+      <SequenceList sequences={state} onView={generateFibonacci} clear={removeShownSequence} delete={deleteSequence} sequence={shownSequence} />
     </div>
   );
 }

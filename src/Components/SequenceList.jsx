@@ -6,7 +6,7 @@ export default function SequenceList(props) {
 
   if (props.sequences) {
      parsedSequences = props.sequences.map(seq => {
-    return <ListItem id={seq.id} key={seq.id} onDelete={props.delete} shown={props.sequence} numone={seq.num_one} numTwo={seq.num_two} numThree={seq.num_three} onSelect={props.onView} />
+    return <ListItem id={seq.id} key={seq.id} onDelete={props.delete} onChange={props.clear} shown={props.sequence} numone={seq.num_one} numTwo={seq.num_two} numThree={seq.num_three} onSelect={props.onView} />
   })};
   return (
     <div>
