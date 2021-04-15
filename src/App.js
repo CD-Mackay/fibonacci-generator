@@ -10,14 +10,14 @@ import './App.css';
 function App() {
 
 
-  const { generateFibonacci, shownSequence } = useInputData();
+  const { generateFibonacci, shownSequence, removeShownSequence } = useInputData();
   const { saveSequence, deleteSequence, state } = useStoredData();
 
   
   return (
     <div className="App">
       <Input onSubmit={generateFibonacci} shown={shownSequence} />
-      {shownSequence && <Output sequence={shownSequence} save={saveSequence} />}
+      {shownSequence && <Output sequence={shownSequence} save={saveSequence} clear={removeShownSequence} />}
       <SequenceList sequences={state} onView={generateFibonacci} delete={deleteSequence} sequence={shownSequence} />
     </div>
   );

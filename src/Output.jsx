@@ -4,6 +4,7 @@ import './styles.scss';
 export default function Output(props) {
   function save () {
     props.save(sequence[0], sequence[1], sequence.length -2);
+    props.clear();
   };
 
  

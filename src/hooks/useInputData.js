@@ -13,11 +13,14 @@ const useInputData = () => {
   } 
 
 
+  function removeShownSequence() {
+    setShownSequence(null);
+  }
 
 
 
 
-  return { generateFibonacci, shownSequence }
+  return { generateFibonacci, shownSequence, removeShownSequence }
 }
 
 export default useInputData;
