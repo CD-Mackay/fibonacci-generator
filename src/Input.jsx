@@ -8,8 +8,8 @@ export default function Input(props) {
   const [numThree, setNumThree] = useState(0);
   const [sequence, setSequence] = useState([]);
   function create () {
-  const fib = props.onSubmit(numone, numTwo, numThree);
-  setSequence([fib]);
+  props.onSubmit(numone, numTwo, numThree);
+  //setSequence([fib]);
   }
 
   return (
@@ -27,12 +27,12 @@ export default function Input(props) {
       <input type="number" onChange={e => setNumTwo(e.target.value)} />
       </div>
       <div className="seperator">
-        <label for="numentries">How entries should be run?</label>
+        <label for="numentries">How many entries should be run?</label>
         <input type="number" onChange={e => setNumThree(e.target.value)}></input>
       </div>
       <button onClick={create} >Submit!</button>
     </form>
-    {sequence.length > 0 && <Output save={props.onSave} sequence={sequence} numOne={numone} numTwo={numTwo} numThree={numThree} />}
+    {props.shown && <Output save={props.onSave} sequence={sequence} numOne={numone} numTwo={numTwo} numThree={numThree} />}
      </div>
   )
 }

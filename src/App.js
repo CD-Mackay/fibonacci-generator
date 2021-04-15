@@ -9,13 +9,13 @@ import './App.css';
 function App() {
 
 
-  const { generateFibonacci } = useInputData();
+  const { generateFibonacci, shownSequence, selectSequence } = useInputData();
   const { saveSequence, state } = useStoredData();
 
   
   return (
     <div className="App">
-      <Input onSubmit={generateFibonacci} onSave={saveSequence} />
+      <Input onSubmit={generateFibonacci} onSave={saveSequence} shown={shownSequence} />
       <SequenceList sequences={state} onView={generateFibonacci} />
     </div>
   );
