@@ -61,7 +61,8 @@ const useStoredData = () => {
       method: 'delete',
       url: `/sequences/${id}`
     })
-  }
+    .catch(err => console.log(err));
+  };
 
   return {
     saveSequence,
