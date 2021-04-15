@@ -9,11 +9,14 @@ const useInputData = () => {
     for (let i = 0; i < Number(num3); i++) {
       let newNum = Number(arr[arr.length - 1]) + Number(arr[arr.length - 2]);
       arr.push(newNum);
-    } setShownSequence(arr); 
+    } 
+    console.log(arr);
+    setShownSequence(arr); 
   } 
 
 
   function removeShownSequence() {
+    console.log('clearing');
     setShownSequence(null);
   }
 

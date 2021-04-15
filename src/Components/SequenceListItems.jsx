@@ -4,6 +4,7 @@ import './liststyles.scss';
 export default function ListItem(props) {
 const [deleted, setDeleted] = useState(false);
   const view = () => {
+    props.onChange();
     props.onSelect(props.numone, props.numTwo, props.numThree);
   }
 
