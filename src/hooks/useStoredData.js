@@ -9,6 +9,7 @@ axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 const useStoredData = () => {
 
   const [state, setState] = useState();
+
   useEffect(() => {
     axios({
       method: 'get',
@@ -20,6 +21,7 @@ const useStoredData = () => {
     .catch(err => console.log(err));
   }, []);
 
+  // Helper for saveSequence. Prevents duplicate sequences
   function sequenceExists(obj) {
     for (const element in state) {
       let object = state[element]
@@ -33,6 +35,7 @@ const useStoredData = () => {
     return false;
   }
 
+  
   function saveSequence(num1, num2, num3) {
     const sequence = {
       num_one: num1,

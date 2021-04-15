@@ -1,12 +1,9 @@
-import { render } from '@testing-library/react';
 import React, { useState } from 'react';
-import Output from './Output';
 
 export default function Input(props) {
   const [numone, setNumone] = useState(0);
   const [numTwo, setNumTwo] = useState(0);
   const [numThree, setNumThree] = useState(0);
-  //const [sequence, setSequence] = useState([]);
   function create () {
   props.onSubmit(numone, numTwo, numThree);
   }
