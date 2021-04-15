@@ -48,6 +48,17 @@ app.post('/sequences', (req, res) => {
   })
 });
 
+app.delete('/sequences/:id', (req, res) => {
+  const id = req.params.id;
+  pool.query('DELETE FROM sequences WHERE id = $1', [id])
+  .then(response => {
+    res.status(200).send(response);
+  })
+  .catch(err => {
+    res.status(500).send(err);
+  })
+})
+
 
 
 app.listen(port, () => {
