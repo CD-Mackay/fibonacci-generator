@@ -10,18 +10,14 @@ const useInputData = () => {
       let newNum = Number(arr[arr.length - 1]) + Number(arr[arr.length - 2]);
       arr.push(newNum);
     } setShownSequence(arr); 
-      return arr;
   } 
 
 
-  function selectSequence(arr) {
-    setShownSequence(arr);
-  }
 
 
 
 
-  return { generateFibonacci, shownSequence, selectSequence }
+  return { generateFibonacci, shownSequence }
 }
 
 export default useInputData;
