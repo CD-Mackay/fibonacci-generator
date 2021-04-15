@@ -1,4 +1,5 @@
 import { useEffect, useState} from 'react';
+import _ from 'lodash';
 import axios from 'axios';
 
 
@@ -26,7 +27,11 @@ const useStoredData = () => {
       num_three: num3
     };
 
-    console.log(sequence);
+    state.forEach(element => {
+      if (_.isEqual(sequence, element)) {
+        console.log('sequence exists');
+      }
+    })
 
     return axios({
       method: 'post',
