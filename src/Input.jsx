@@ -11,8 +11,7 @@ export default function Input(props) {
   return (
     <div className="input">
       <h3>Welcome to the Fibonacci Generator!</h3>
-      <p>Please enter three numbers below, the first two will form the basis of the Fibonacci sequence.</p>
-      <a id="fibonacci-link" href="https://en.wikipedia.org/wiki/Fibonacci_number">A fib-a what?</a>
+      <div className="form-wrapper">
     <form onSubmit={event => event.preventDefault()} id="input-form">
       <div className="seperator">
       <label for="numOne">Enter the first number</label>
@@ -28,6 +27,11 @@ export default function Input(props) {
       </div>
       <button onClick={create} >Submit!</button>
     </form>
+    <div className="text-wrapper">
+    <p>Please enter three numbers below, the first two will form the basis of the Fibonacci sequence.</p>
+      <a id="fibonacci-link" href="https://en.wikipedia.org/wiki/Fibonacci_number">A fib-a what?</a>
+    </div>
+    </div>
      </div>
   )
 }

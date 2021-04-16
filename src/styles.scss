@@ -16,6 +16,11 @@
   margin-top: 10px;
 }
 
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 #output {
   text-align: left;
   background-color: #8EE694;
@@ -41,5 +46,10 @@
   justify-content: space-between;
   margin-bottom: 2px;
   width: 400px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
