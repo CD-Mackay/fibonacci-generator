@@ -16,6 +16,12 @@
   margin-top: 10px;
 }
 
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 #output {
   text-align: left;
   background-color: #8EE694;
@@ -32,7 +38,6 @@
 }
 
 #root {
-  width: 50vw;
   margin: auto;
 }
 
@@ -42,5 +47,11 @@
   justify-content: space-between;
   margin-bottom: 2px;
   width: 400px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 

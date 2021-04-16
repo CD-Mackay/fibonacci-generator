@@ -10,6 +10,7 @@ export default function SequenceList(props) {
   })};
   return (
     <div>
+      <h3>View other sequences!</h3>
       {parsedSequences}
     </div>
   )
