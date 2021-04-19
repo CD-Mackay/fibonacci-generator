@@ -1,3 +1,12 @@
-.deleted-item {
-  display: none;
+@import '../variables.scss';
+
+button {
+  background-color: $dark-green;
+  color: white;
+  font-weight: 800;
+  border-radius: 5px;
+}
+
+.delete {
+  background-color: $delete-color;
 }
