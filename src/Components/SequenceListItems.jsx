@@ -17,7 +17,7 @@ const [deleted, setDeleted] = useState(false);
   return (
     <div className={deleted ? "deleted-item" : "list-item"}>
    <button onClick={view}>{props.numone}, {props.numTwo}, {props.numThree}</button>
-   <button onClick={removeSeq}>Delete</button>
+   <button className="delete" onClick={removeSeq}>Delete</button>
    </div>
   )
 }
