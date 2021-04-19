@@ -26,6 +26,12 @@
   justify-content: space-around;
 }
 
+#fibonacci-link {
+  text-decoration: none;
+  color: $link-color;
+  font-weight: 800;
+}
+
 #output {
   text-align: left;
   background-color: #8EE694;
