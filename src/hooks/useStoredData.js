@@ -44,6 +44,9 @@ const useStoredData = () => {
     };
 
     if (!sequenceExists(sequence)) {
+
+      setState([...state, sequence]);
+      
     return axios({
       method: 'post',
       url: '/sequences',

@@ -6,6 +6,8 @@ export default function Input(props) {
   const [numThree, setNumThree] = useState(0);
   function create () {
   props.onSubmit(numone, numTwo, numThree);
+  document.getElementById("input-form").reset();
+
   }
 
   return (
