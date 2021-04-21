@@ -22,8 +22,13 @@
 
 .form-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+}
+
+.fibonacci-input {
+  line-height: 1rem;
+  resize: none;
 }
 
 #fibonacci-link {
@@ -53,15 +58,27 @@
 
 .seperator {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 2px;
-  width: 400px;
+  margin-bottom: 10px;
 }
 
 .text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+@media only screen and (min-width: 766px) {
+  .form-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 410px) {
+  .seperator {
+    flex-direction: row;
+    margin-bottom: 2px;
+  }
 }
 

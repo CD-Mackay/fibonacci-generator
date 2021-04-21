@@ -17,15 +17,15 @@ export default function Input(props) {
     <form onSubmit={event => event.preventDefault()} id="input-form">
       <div className="seperator">
       <label for="numOne">Enter the first number</label>
-      <input type="number" onChange={e => setNumone(e.target.value)} />
+      <input type="number" className="fibonacci-input" onChange={e => setNumone(e.target.value)} />
       </div>
       <div className="seperator">
       <label for="numTwo">Enter the second number</label>
-      <input type="number" onChange={e => setNumTwo(e.target.value)} />
+      <input type="number" className="fibonacci-input" onChange={e => setNumTwo(e.target.value)} />
       </div>
       <div className="seperator">
         <label for="numentries">How many entries should be run?</label>
-        <input type="number" onChange={e => setNumThree(e.target.value)}></input>
+        <input type="number" className="fibonacci-input" onChange={e => setNumThree(e.target.value)}></input>
       </div>
       <button onClick={create} >Submit!</button>
     </form>
