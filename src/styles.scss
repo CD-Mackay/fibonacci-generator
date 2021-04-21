@@ -6,6 +6,18 @@
   height: 2px;
   background-color: $visualizer-color;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-wrapper {
+  border: 1px solid gray;
+  border-radius: 5px;
+  p {
+    margin-top: 0;
+  }
+}
 
 .input {
   padding: 10px;
@@ -39,7 +51,7 @@
 
 #output {
   text-align: left;
-  background-color: #8EE694;
+  background-color: $medium-green;
   padding: 10px;
   border-radius: 5px;
   li {
@@ -49,6 +61,13 @@
 
   h3, h4 {
     text-align: center;
+  }
+}
+
+.placeholder {
+  background-color: $medium-green;
+  h4 {
+    margin-top: 0;
   }
 }
 
