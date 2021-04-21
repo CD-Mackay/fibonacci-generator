@@ -22,7 +22,7 @@
 
 .form-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -53,15 +53,27 @@
 
 .seperator {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2px;
-  width: 400px;
+  // width: 400px;
 }
 
 .text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+@media only screen and (min-width: 766px) {
+  .form-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 410px) {
+  .seperator {
+    flex-direction: row;
+  }
 }
 
